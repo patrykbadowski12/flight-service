@@ -1,3 +1,15 @@
+spring:
+  application:
+    name: "flight-service"
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
 goFlightLabs:
   access_key : eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiODQ1ODNmNWNhYmVmOWYyNDAxNWYzZmM0MDU1YWU3NzdiYzZmNmMxNTMxYTcwZjczMWM1OGNkMjEwZjI5YmNjOTY4ODhmMDJkMGQ1ZGI4MWIiLCJpYXQiOjE2NjQyMTMyMTAsIm5iZiI6MTY2NDIxMzIxMCwiZXhwIjoxNjk1NzQ5MjEwLCJzdWIiOiIxMzY2NCIsInNjb3BlcyI6W119.nb2gwmpieKN5zGS2YTWeY4fYDLY7CxdzPTRtFxuoRCSNEf7XarlRic2G5guUWS36N8rNDLTRZSMdV20NokW2ow
   url:  https://app.goflightlabs.com
@@ -6,6 +18,7 @@ goFlightLabs:
 logging:
   level:
     com.travel.app.flightservice.GoFlightLabsClient: DEBUG
+
 feign:
   client:
     config:
